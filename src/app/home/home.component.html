@@ -1,0 +1,22 @@
+
+<section id="hero" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Welcome to The World of Music!</h1>
+
+      
+        <form [formGroup]="artist" (submit)="showartist()">
+          <div class="input-group rounded searchbar">
+          <input type="search" class="form-control rounded" placeholder="Search for Artist Name" 
+        aria-label="Search" aria-describedby="search-addon"  formControlName="artistName" />
+      </div>  
+      </form>
+      
+      
+      <a class="btn-about" (click)="showartist()">Search</a>
+     
+    </div>
+  </section>
+
+ 
+
+  

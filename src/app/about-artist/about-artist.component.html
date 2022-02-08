@@ -1,0 +1,81 @@
+<main id="main">
+  <button type="button" class="back" [routerLink]="['/']">
+    <i class="bi bi-arrow-left me-1" ></i>Back
+  </button>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="zoomIn">
+        
+        <div class="section-title">
+          <h2>Artist Details</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img [src]=artistdata?.image_url class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content mt-5">
+            <h3>{{artistdata?.name}}</h3>
+            <p class="fst-italic">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              magna aliqua.
+            </p>
+            <div class="row">
+              <div class="col-lg-12">
+                <ul >
+                  <li><strong>Twitter:</strong> <a [href]="artistdata?.links[0]?.url"> {{artistdata?.links[0]?.url}}</a></li>
+                  <li><strong>Facebook URL:</strong><a [href]="artistdata?.links[2]?.url">{{artistdata?.links[2]?.url}}</a></li>
+                  <!-- <li><strong>Website:</strong><a href="#">{{artistdata?.links[1]?.url}}</a></li> -->
+                  
+                </ul>
+              </div>
+            
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+    <section id="events" class="events">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>{{artistdata?.upcoming_event_count}} Upcoming  Events</h2>
+          </div>
+  
+          <div class="row">
+            <div *ngFor="let event of artistEventData | paginate: { itemsPerPage: 10, currentPage: p }" class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="icon-box iconbox-blue">
+                <h4>Event Details</h4>
+                <hr>
+               <div class="row">
+                   <div class="col-xs-6">
+                    <ul>
+                        <li><i class="bi bi-rounded-right"></i> <strong>Country:</strong> {{event.venue.country}}</li>
+                        <li><i class="bi bi-rounded-right"></i> <strong>City:</strong> {{event.venue.city}}</li>
+                        
+                      </ul>
+                   </div>
+                   <div class="col-xs-6">
+                    <ul>
+                        <li><i class="bi bi-rounded-right"></i> <strong>Venue:</strong> {{event.venue.name}}</li>
+                        <li><i class="bi bi-rounded-right"></i> <strong>Date:</strong> {{event.datetime | date : 'dd/MM/YYYY'}}</li>
+                        
+                      </ul>
+                </div>
+               </div>
+              </div>
+            </div>
+  
+          
+  
+          </div>
+          <pagination-controls (pageChange)="ChangePage($event)"></pagination-controls>
+        </div>
+      </section><!-- End events Section -->
+  
+
+  </main><!-- End #main -->
