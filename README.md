@@ -6,12 +6,12 @@ Run This project is a simple web application that is being used to take an artis
 
 ## Technologies
 Run This project is created with:
-•	Bootstrap 5 
-•	Angular 11.2.10
-•	Typescript 4.1.5
-•	aos 2.3.4
-•	Ngx-pagination 5.1.1
-•	Karma-jasmine 4.0.0
+1.	Bootstrap 5 
+2.	Angular 11.2.10
+3.	Typescript 4.1.5
+4.	aos 2.3.4
+5.	Ngx-pagination 5.1.1
+6.	Karma-jasmine 4.0.0
 ## Features
  1.	Use search bar to search for an artist.
  2.	View the matched artist’s details and their upcoming events.
