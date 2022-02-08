@@ -2,10 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 ## General Info
-Run This project is a simple web application that is being used to take an artist and show details about the artist and their events.
+ This project is a simple web application that is being used to take an artist and show details about the artist and their events.
 
 ## Technologies
-Run This project is created with:
+ This project is created with:
 1.	Bootstrap 5 
 2.	Angular 11.2.10
 3.	Typescript 4.1.5
